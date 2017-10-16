@@ -16,7 +16,7 @@
   <email>p@rdus.de</email>
   <active>no</active>
  </lead>
- <date>2017-10-16</date>
+ <date>2017-10-17</date>
  <version>
   <release>2.1.1</release>
   <api>1.1.0</api>
@@ -35,7 +35,6 @@
     <dir name="Horde">
      <dir name="Cli">
       <dir name="Modular">
-       <file name="COPYING" role="doc" />
        <file name="DOCS_ORIGIN" role="doc" />
        <file name="UPGRADING" role="doc" />
       </dir> <!-- /doc/Horde/Cli/Modular -->
@@ -49,8 +48,8 @@
        <file name="Exception.php" role="php" />
        <file name="Module.php" role="php" />
        <file name="ModuleProvider.php" role="php" />
-       <file name="ModuleUsage.php" role="php" />
        <file name="Modules.php" role="php" />
+       <file name="ModuleUsage.php" role="php" />
       </dir> <!-- /lib/Horde/Cli/Modular -->
       <file name="Modular.php" role="php" />
      </dir> <!-- /lib/Horde/Cli -->
@@ -87,6 +86,7 @@
      </dir> <!-- /test/Horde/Cli -->
     </dir> <!-- /test/Horde -->
    </dir> <!-- /test -->
+   <file name="LICENSE" role="doc" />
    <file name="README.rst" role="doc" />
   </dir> <!-- / -->
  </contents>
@@ -120,30 +120,30 @@
  </dependencies>
  <phprelease>
   <filelist>
-   <install as="README.rst" name="README.rst" />
-   <install as="COPYING" name="doc/Horde/Cli/Modular/COPYING" />
    <install as="DOCS_ORIGIN" name="doc/Horde/Cli/Modular/DOCS_ORIGIN" />
    <install as="UPGRADING" name="doc/Horde/Cli/Modular/UPGRADING" />
    <install as="Horde/Cli/Modular.php" name="lib/Horde/Cli/Modular.php" />
    <install as="Horde/Cli/Modular/Exception.php" name="lib/Horde/Cli/Modular/Exception.php" />
    <install as="Horde/Cli/Modular/Module.php" name="lib/Horde/Cli/Modular/Module.php" />
    <install as="Horde/Cli/Modular/ModuleProvider.php" name="lib/Horde/Cli/Modular/ModuleProvider.php" />
-   <install as="Horde/Cli/Modular/ModuleUsage.php" name="lib/Horde/Cli/Modular/ModuleUsage.php" />
    <install as="Horde/Cli/Modular/Modules.php" name="lib/Horde/Cli/Modular/Modules.php" />
+   <install as="Horde/Cli/Modular/ModuleUsage.php" name="lib/Horde/Cli/Modular/ModuleUsage.php" />
+   <install as="LICENSE" name="LICENSE" />
+   <install as="README.rst" name="README.rst" />
    <install as="Horde/Cli/Modular/AllTests.php" name="test/Horde/Cli/Modular/AllTests.php" />
    <install as="Horde/Cli/Modular/Autoload.php" name="test/Horde/Cli/Modular/Autoload.php" />
    <install as="Horde/Cli/Modular/bootstrap.php" name="test/Horde/Cli/Modular/bootstrap.php" />
-   <install as="Horde/Cli/Modular/phpunit.xml" name="test/Horde/Cli/Modular/phpunit.xml" />
-   <install as="Horde/Cli/Modular/TestCase.php" name="test/Horde/Cli/Modular/TestCase.php" />
    <install as="Horde/Cli/Modular/fixtures/Module/One.php" name="test/Horde/Cli/Modular/fixtures/Module/One.php" />
    <install as="Horde/Cli/Modular/fixtures/Module/Two.php" name="test/Horde/Cli/Modular/fixtures/Module/Two.php" />
+   <install as="Horde/Cli/Modular/phpunit.xml" name="test/Horde/Cli/Modular/phpunit.xml" />
+   <install as="Horde/Cli/Modular/Stub/Module/One.php" name="test/Horde/Cli/Modular/Stub/Module/One.php" />
    <install as="Horde/Cli/Modular/Stub/Modules.php" name="test/Horde/Cli/Modular/Stub/Modules.php" />
    <install as="Horde/Cli/Modular/Stub/Provider.php" name="test/Horde/Cli/Modular/Stub/Provider.php" />
-   <install as="Horde/Cli/Modular/Stub/Module/One.php" name="test/Horde/Cli/Modular/Stub/Module/One.php" />
+   <install as="Horde/Cli/Modular/TestCase.php" name="test/Horde/Cli/Modular/TestCase.php" />
    <install as="Horde/Cli/Modular/Unit/ModularTest.php" name="test/Horde/Cli/Modular/Unit/ModularTest.php" />
    <install as="Horde/Cli/Modular/Unit/ModuleProviderTest.php" name="test/Horde/Cli/Modular/Unit/ModuleProviderTest.php" />
    <install as="Horde/Cli/Modular/Unit/ModulesTest.php" name="test/Horde/Cli/Modular/Unit/ModulesTest.php" />
-   </filelist>
+  </filelist>
  </phprelease>
  <changelog>
   <release>
@@ -299,7 +299,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-16</date>
+   <date>2017-10-17</date>
    <license uri="http://www.horde.org/licenses/lgpl">LGPL-2.1</license>
    <notes>
 * 
