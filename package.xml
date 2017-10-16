@@ -16,7 +16,7 @@
   <email>p@rdus.de</email>
   <active>no</active>
  </lead>
- <date>2017-05-03</date>
+ <date>2017-10-16</date>
  <version>
   <release>2.1.1</release>
   <api>1.1.0</api>
@@ -37,7 +37,6 @@
       <dir name="Modular">
        <file name="COPYING" role="doc" />
        <file name="DOCS_ORIGIN" role="doc" />
-       <file name="README" role="doc" />
        <file name="UPGRADING" role="doc" />
       </dir> <!-- /doc/Horde/Cli/Modular -->
      </dir> <!-- /doc/Horde/Cli -->
@@ -88,6 +87,7 @@
      </dir> <!-- /test/Horde/Cli -->
     </dir> <!-- /test/Horde -->
    </dir> <!-- /test -->
+   <file name="README.rst" role="doc" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
@@ -120,9 +120,9 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="README.rst" name="README.rst" />
    <install as="COPYING" name="doc/Horde/Cli/Modular/COPYING" />
    <install as="DOCS_ORIGIN" name="doc/Horde/Cli/Modular/DOCS_ORIGIN" />
-   <install as="README" name="doc/Horde/Cli/Modular/README" />
    <install as="UPGRADING" name="doc/Horde/Cli/Modular/UPGRADING" />
    <install as="Horde/Cli/Modular.php" name="lib/Horde/Cli/Modular.php" />
    <install as="Horde/Cli/Modular/Exception.php" name="lib/Horde/Cli/Modular/Exception.php" />
@@ -299,7 +299,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-05-03</date>
+   <date>2017-10-16</date>
    <license uri="http://www.horde.org/licenses/lgpl">LGPL-2.1</license>
    <notes>
 * 
