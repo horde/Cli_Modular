@@ -35,8 +35,8 @@
     <dir name="Horde">
      <dir name="Cli">
       <dir name="Modular">
-       <file name="DOCS_ORIGIN" role="doc" />
-       <file name="UPGRADING" role="doc" />
+       <file name="DOCS_ORIGIN.rst" role="doc" />
+       <file name="UPGRADING.rst" role="doc" />
       </dir> <!-- /doc/Horde/Cli/Modular -->
      </dir> <!-- /doc/Horde/Cli -->
     </dir> <!-- /doc/Horde -->
@@ -120,8 +120,8 @@
  </dependencies>
  <phprelease>
   <filelist>
-   <install as="DOCS_ORIGIN" name="doc/Horde/Cli/Modular/DOCS_ORIGIN" />
-   <install as="UPGRADING" name="doc/Horde/Cli/Modular/UPGRADING" />
+   <install as="DOCS_ORIGIN.rst" name="doc/Horde/Cli/Modular/DOCS_ORIGIN.rst" />
+   <install as="UPGRADING.rst" name="doc/Horde/Cli/Modular/UPGRADING.rst" />
    <install as="Horde/Cli/Modular.php" name="lib/Horde/Cli/Modular.php" />
    <install as="Horde/Cli/Modular/Exception.php" name="lib/Horde/Cli/Modular/Exception.php" />
    <install as="Horde/Cli/Modular/Module.php" name="lib/Horde/Cli/Modular/Module.php" />
