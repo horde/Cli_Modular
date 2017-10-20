@@ -16,7 +16,7 @@
   <email>p@rdus.de</email>
   <active>no</active>
  </lead>
- <date>2017-10-17</date>
+ <date>2017-10-20</date>
  <version>
   <release>2.1.1</release>
   <api>1.1.0</api>
@@ -80,7 +80,6 @@
        <file name="AllTests.php" role="test" />
        <file name="Autoload.php" role="test" />
        <file name="bootstrap.php" role="test" />
-       <file name="phpunit.xml" role="test" />
        <file name="TestCase.php" role="test" />
       </dir> <!-- /test/Horde/Cli/Modular -->
      </dir> <!-- /test/Horde/Cli -->
@@ -135,7 +134,6 @@
    <install as="Horde/Cli/Modular/bootstrap.php" name="test/Horde/Cli/Modular/bootstrap.php" />
    <install as="Horde/Cli/Modular/fixtures/Module/One.php" name="test/Horde/Cli/Modular/fixtures/Module/One.php" />
    <install as="Horde/Cli/Modular/fixtures/Module/Two.php" name="test/Horde/Cli/Modular/fixtures/Module/Two.php" />
-   <install as="Horde/Cli/Modular/phpunit.xml" name="test/Horde/Cli/Modular/phpunit.xml" />
    <install as="Horde/Cli/Modular/Stub/Module/One.php" name="test/Horde/Cli/Modular/Stub/Module/One.php" />
    <install as="Horde/Cli/Modular/Stub/Modules.php" name="test/Horde/Cli/Modular/Stub/Modules.php" />
    <install as="Horde/Cli/Modular/Stub/Provider.php" name="test/Horde/Cli/Modular/Stub/Provider.php" />
@@ -299,7 +297,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-17</date>
+   <date>2017-10-20</date>
    <license uri="http://www.horde.org/licenses/lgpl">LGPL-2.1</license>
    <notes>
 * 
