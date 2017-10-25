@@ -1,5 +1,5 @@
 {
-    "name": "horde/horde-cli-modular",
+    "name": "horde/cli-modular",
     "description": "A toolset for CLI interfaces that are modular.",
     "type": "library",
     "homepage": "https://pear.horde.org",
@@ -16,8 +16,8 @@
             "role": "lead"
         }
     ],
-    "version": "2.1.0",
-    "time": "2017-05-03",
+    "version": "2.1.1",
+    "time": "2017-10-20",
     "repositories": [
         {
             "type": "pear",
@@ -26,10 +26,10 @@
     ],
     "require": {
         "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Argv": "^2@stable"
+        "pear-pear.horde.org/Horde_Argv": "^2"
     },
     "suggest": {
-        "pear-pear.horde.org/Horde_Test": "^2.1@stable"
+        "pear-pear.horde.org/Horde_Test": "^2.1"
     },
     "replace": {
         "pear-pear.horde.org/Horde_Cli_Modular": "2.*",
