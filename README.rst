@@ -4,6 +4,8 @@
 
 Command line interfaces can often be composed of different modules responsible for distinct actions. Horde_Cli_Modular allows each such module to influence the overall command line interface.
 
+First and foremost each module can add its own option group with a specific title, description and a set of module specific options (see Horde_Argv_OptionGroup for further details). In addition Horde_Cli_Modular allows a module to modify the global usage string and add basic options valid for all modules.
+
 --------------
  Introduction
 --------------
