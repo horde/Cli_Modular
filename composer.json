@@ -35,9 +35,6 @@
     "autoload": {
         "psr-0": {
             "Horde_Cli_Modular": "lib/"
-        },
-        "psr-4": {
-            "Horde\\Cli\\Modular\\": "src/"
         }
     }
 }
