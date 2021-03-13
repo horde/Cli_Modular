@@ -1,4 +1,5 @@
 {
+    "minimum-stability": "dev",
     "name": "horde/cli_modular",
     "description": "Modular command line interface library",
     "type": "library",
@@ -25,10 +26,10 @@
     ],
     "require": {
         "php": "^7",
-        "horde/argv": "^3"
+        "horde/argv": "^3 || dev-FRAMEWORK_6_0"
     },
     "suggest": {
-        "horde/test": "^3"
+        "horde/test": "^3 || dev-FRAMEWORK_6_0"
     },
     "autoload": {
         "psr-0": {
