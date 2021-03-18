@@ -15,19 +15,23 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
+namespace Horde\Cli\Modular\Unit;
+use Horde_Cli_Modular_TestCase as TestCase;
+use \Horde_Cli_Modular;
+use \Horde_Cli_Modular_Modules;
+use \Horde_Cli_Modular_ModuleProvider;
 
 /**
  * Test the module wrapper.
  */
-class Horde_Cli_Modular_Unit_ModularTest
-extends Horde_Cli_Modular_TestCase
+class ModularTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $_SERVER['argv'] = array('test');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($_SERVER['argv']);
     }
@@ -53,20 +57,16 @@ extends Horde_Cli_Modular_TestCase
         $this->assertInstanceOf('Horde_Test_Stub_Parser', $modular->createParser());
     }
 
-    /**
-     * @expectedException Horde_Cli_Modular_Exception
-     */
     public function testMissingModules()
     {
+        $this->expectException('Horde_Cli_Modular_Exception');
         $modular = new Horde_Cli_Modular();
         $modular->getModules();
     }
 
-    /**
-     * @expectedException Horde_Cli_Modular_Exception
-     */
     public function testInvalidModules()
     {
+        $this->expectException('Horde_Cli_Modular_Exception');
         $modular = new Horde_Cli_Modular(array('modules' => 1.0));
         $modular->getModules();
     }
@@ -106,20 +106,16 @@ extends Horde_Cli_Modular_TestCase
         $this->assertInstanceOf('Horde_Cli_Modular_Modules', $modular->getModules());
     }
 
-    /**
-     * @expectedException Horde_Cli_Modular_Exception
-     */
     public function testMissingProviders()
     {
+        $this->expectException('Horde_Cli_Modular_Exception');
         $modular = new Horde_Cli_Modular();
         $modular->getProvider();
     }
 
-    /**
-     * @expectedException Horde_Cli_Modular_Exception
-     */
     public function testInvalidProviders()
     {
+        $this->expectException('Horde_Cli_Modular_Exception');
         $modular = new Horde_Cli_Modular(array('provider' => 1.0));
         $modular->getProvider();
     }
@@ -166,7 +162,7 @@ extends Horde_Cli_Modular_TestCase
     public function testGeneralUsage()
     {
         $modular = $this->_getDefault();
-        $this->assertContains(
+        $this->assertStringContainsString(
             'GLOBAL USAGE', $modular->createParser()->formatHelp()
         );
     }
@@ -174,7 +170,7 @@ extends Horde_Cli_Modular_TestCase
     public function testBaseOption()
     {
         $modular = $this->_getDefault();
-        $this->assertContains(
+        $this->assertStringContainsString(
             '--something=SOMETHING', $modular->createParser()->formatHelp()
         );
     }
@@ -182,7 +178,7 @@ extends Horde_Cli_Modular_TestCase
     public function testGroupTitle()
     {
         $modular = $this->_getDefault();
-        $this->assertContains(
+        $this->assertStringContainsString(
             'Test Group Title', $modular->createParser()->formatHelp()
         );
     }
@@ -190,7 +186,7 @@ extends Horde_Cli_Modular_TestCase
     public function testGroupDescription()
     {
         $modular = $this->_getDefault();
-        $this->assertContains(
+        $this->assertStringContainsString(
             'Test Group Description', $modular->createParser()->formatHelp()
         );
     }
@@ -198,7 +194,7 @@ extends Horde_Cli_Modular_TestCase
     public function testGroupOption()
     {
         $modular = $this->_getDefault();
-        $this->assertContains(
+        $this->assertStringContainsString(
             '--group=GROUP', $modular->createParser()->formatHelp()
         );
     }

@@ -15,27 +15,25 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
+namespace Horde\Cli\Modular\Unit;
+use Horde_Cli_Modular_TestCase as TestCase;
+use \Horde_Cli_Modular_Modules;
 
 /**
  * Test the modules handler.
  */
-class Horde_Cli_Modular_Unit_ModulesTest
-extends Horde_Cli_Modular_TestCase
+class ModulesTest extends TestCase
 {
 
-    /**
-     * @expectedException Horde_Cli_Modular_Exception
-     */
     public function testMissingDirectory()
     {
+        $this->expectException('Horde_Cli_Modular_Exception');        
         $modules = new Horde_Cli_Modular_Modules();
     }
 
-    /**
-     * @expectedException Horde_Cli_Modular_Exception
-     */
     public function testInvalidDirectory()
     {
+        $this->expectException('Horde_Cli_Modular_Exception');
         $modules = new Horde_Cli_Modular_Modules(
             array('directory' => __DIR__ . '/DOES_NOT_EXIST')
         );
