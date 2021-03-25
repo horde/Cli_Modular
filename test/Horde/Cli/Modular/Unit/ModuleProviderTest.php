@@ -16,7 +16,7 @@
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
 namespace Horde\Cli\Modular\Unit;
-use Horde_Cli_Modular_TestCase as TestCase;
+use Horde\Cli\Modular\TestCase;
 use \stdClass;
 use \Horde_Cli_Modular_ModuleProvider;
 
