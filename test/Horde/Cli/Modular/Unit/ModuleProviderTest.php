@@ -15,26 +15,26 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
+namespace Horde\Cli\Modular\Unit;
+use Horde\Cli\Modular\TestCase;
+use \stdClass;
+use \Horde_Cli_Modular_ModuleProvider;
 
 /**
  * Test the module provider.
  */
-class Horde_Cli_Modular_Unit_ModuleProviderTest
-extends Horde_Cli_Modular_TestCase
+class ModuleProviderTest extends TestCase
 {
-    /**
-     * @expectedException Horde_Cli_Modular_Exception
-     */
+
     public function testMissingPrefix()
     {
+        $this->expectException('Horde_Cli_Modular_Exception');
         $provider = new Horde_Cli_Modular_ModuleProvider();
     }
 
-    /**
-     * @expectedException Horde_Cli_Modular_Exception
-     */
     public function testInvalidModule()
     {
+        $this->expectException('Horde_Cli_Modular_Exception');
         $provider = new Horde_Cli_Modular_ModuleProvider(
             array('prefix' => 'INVALID')
         );

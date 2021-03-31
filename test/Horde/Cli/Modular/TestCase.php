@@ -15,8 +15,9 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
+namespace Horde\Cli\Modular;
+use PHPUnit\Framework\TestCase as PHPTestCase;
 
-class Horde_Cli_Modular_TestCase
-extends PHPUnit_Framework_TestCase
+class TestCase extends PHPTestCase
 {
 }
