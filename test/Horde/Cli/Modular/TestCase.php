@@ -16,8 +16,8 @@
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
 namespace Horde\Cli\Modular;
-use PHPUnit\Framework\TestCase as ExtTestCase;
+use PHPUnit\Framework\TestCase as PHPTestCase;
 
-class TestCase extends ExtTestCase
+class TestCase extends PHPTestCase
 {
 }
