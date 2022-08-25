@@ -15,8 +15,8 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
-namespace Horde\Cli\Modular\Unit;
-use Horde\Cli\Modular\TestCase;
+namespace Horde\Cli\Modular\Test\LibContent\Unit;
+use Horde\Cli\Modular\Test\LibContent\TestCase;
 use \stdClass;
 use \Horde_Cli_Modular_ModuleProvider;
 
@@ -45,7 +45,7 @@ class ModuleProviderTest extends TestCase
     {
         $provider = new Horde_Cli_Modular_ModuleProvider(
             array(
-                'prefix' => 'Horde_Cli_Modular_Stub_Module_',
+                'prefix' => 'Horde\\Cli\\Modular\\Test\\LibContent\Stub\\Module\\',
                 'dependencies' => new stdClass,
             )
         );
@@ -59,7 +59,7 @@ class ModuleProviderTest extends TestCase
         $dependencies = new stdClass;
         $provider = new Horde_Cli_Modular_ModuleProvider(
             array(
-                'prefix' => 'Horde_Cli_Modular_Stub_Module_',
+                'prefix' => 'Horde\\Cli\\Modular\\Test\\LibContent\\Stub\\Module\\',
                 'dependencies' => $dependencies,
             )
         );

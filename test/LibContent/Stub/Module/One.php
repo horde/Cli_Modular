@@ -1,6 +1,9 @@
 <?php
+namespace Horde\Cli\Modular\Test\LibContent\Stub\Module;
+use Horde_Cli_Modular_Module;
+use Horde_Argv_Option;
 
-class Horde_Cli_Modular_Stub_Module_One
+class One
 implements Horde_Cli_Modular_Module
 {
     public $args;

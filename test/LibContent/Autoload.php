@@ -1,9 +1,10 @@
 <?php
 /**
- * Basic test case.
+ * Setup autoloading for the tests.
  *
  * PHP version 5
- * Copyright 2010-2017 Horde LLC (http://www.horde.org/)
+ *
+ * Copyright 2009-2017 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -15,9 +16,11 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
-namespace Horde\Cli\Modular;
-use PHPUnit\Framework\TestCase as PHPTestCase;
 
-class TestCase extends PHPTestCase
-{
-}
+/** Load the basic test definition */
+//require_once __DIR__ . '/TestCase.php';
+
+/** Load stub classes */
+require_once __DIR__ . '/Stub/Modules.php';
+require_once __DIR__ . '/Stub/Provider.php';
+require_once __DIR__ . '/Stub/Module/One.php';

@@ -15,9 +15,10 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
-namespace Horde\Cli\Modular\Unit;
-use Horde\Cli\Modular\TestCase;
+namespace Horde\Cli\Modular\Test\LibContent\Unit;
+use Horde\Cli\Modular\Test\LibContent\TestCase;
 use \Horde_Cli_Modular_Modules;
+use Horde_Cli_Modular_Exception;
 
 /**
  * Test the modules handler.
