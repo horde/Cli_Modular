@@ -15,11 +15,14 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
-namespace Horde\Cli\Modular\Unit;
-use Horde\Cli\Modular\TestCase;
+namespace Horde\Cli\Modular\Test\LibContent\Unit;
+
+use Horde\Cli\Modular\Test\LibContent\Stub\Modules;
+use Horde\Cli\Modular\Test\LibContent\TestCase;
 use \Horde_Cli_Modular;
 use \Horde_Cli_Modular_Modules;
 use \Horde_Cli_Modular_ModuleProvider;
+use Horde_Argv_Parser;
 
 /**
  * Test the module wrapper.
@@ -44,7 +47,7 @@ class ModularTest extends TestCase
                     'directory' => __DIR__ . '/../Stub/Module'
                 ),
                 'provider' => array(
-                    'prefix' => 'Horde_Cli_Modular_Stub_Module_'
+                    'prefix' => 'Horde\\Cli\\Modular\\Test\\LibContent\\Stub\\Module\\'
                 ),
             )
         );
@@ -93,10 +96,10 @@ class ModularTest extends TestCase
     {
         $modular = new Horde_Cli_Modular(
             array(
-                'modules' => 'Horde_Cli_Modular_Stub_Modules'
+                'modules' => Modules::class
             )
         );
-        $this->assertInstanceOf('Horde_Cli_Modular_Modules', $modular->getModules());
+        $this->assertInstanceOf(Horde_Cli_Modular_Modules::class, $modular->getModules());
     }
 
     public function testArrayModules()
@@ -147,7 +150,7 @@ class ModularTest extends TestCase
     {
         $modular = new Horde_Cli_Modular(
             array(
-                'provider' => 'Horde_Cli_Modular_Stub_Provider'
+                'provider' => 'Horde\\Cli\\Modular\\Test\\LibContent\\Stub\\Provider'
             )
         );
         $this->assertInstanceOf(
@@ -221,7 +224,7 @@ class ModularTest extends TestCase
                     'directory' => __DIR__ . '/../Stub/Module'
                 ),
                 'provider' => array(
-                    'prefix' => 'Horde_Cli_Modular_Stub_Module_'
+                    'prefix' => 'Horde\\Cli\\Modular\\Test\\LibContent\\Stub\\Module\\'
                 ),
             )
         );

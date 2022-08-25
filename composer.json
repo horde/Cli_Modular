@@ -1,5 +1,4 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/cli_modular",
     "description": "Modular command line interface library",
     "type": "library",
@@ -17,16 +16,19 @@
             "role": "lead"
         }
     ],
-    "time": "2021-03-13",
+    "time": "2022-08-25",
     "repositories": [
         {
             "type": "composer",
-            "url": "https://horde-satis.maintaina.com/"
+            "url": "https://horde-satis.maintaina.com"
         }
     ],
     "require": {
         "php": "^7.4 || ^8",
         "horde/argv": "^3 || dev-FRAMEWORK_6_0"
+    },
+    "require-dev": {
+        "horde/test": "dev-FRAMEWORK_6_0"
     },
     "suggest": {
         "horde/test": "^3 || dev-FRAMEWORK_6_0"
@@ -34,6 +36,20 @@
     "autoload": {
         "psr-0": {
             "Horde_Cli_Modular": "lib/"
+        },
+        "psr-4": {
+            "Horde\\Cli\\Modular\\": "src/"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Horde\\Cli\\Modular\\Test\\": "test/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "horde/horde-installer-plugin": true
+        }
+    },
+    "minimum-stability": "dev"
 }
