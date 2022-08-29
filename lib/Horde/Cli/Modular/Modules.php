@@ -103,7 +103,7 @@ implements IteratorAggregate, Countable
 
     /**
      */
-    public function getIterator()
+    public function getIterator(): Iterator
     {
         return new ArrayIterator($this->_modules);
     }
@@ -113,7 +113,7 @@ implements IteratorAggregate, Countable
      *
      * @return integer Number of modules.
      */
-    public function count()
+    public function count(): int
     {
         return count($this->_modules);
     }
