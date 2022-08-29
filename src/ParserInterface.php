@@ -15,15 +15,18 @@ declare(strict_types=1);
 namespace Horde\Cli\Modular;
 
 /**
- * Aggregate modular CLI.
+ * The interface for CLI Modular to handle argument and option parsing
  *
+ * Abstracting this allows to plug alternatives.
+ * All Parsers only handle input up to their specific level.
+ * 
  * @author   Ralf Lang <ralf.lang@ralf-lang.de>
  * @category  Horde
  * @copyright 2010-2022 Horde LLC
  * @license   http://www.horde.org/licenses/lgpl21 LGPL
  * @package   Cli_Modular
  */
-class ModularCli implements ModularCliInterface
+interface ParserInterface
 {
 
 }

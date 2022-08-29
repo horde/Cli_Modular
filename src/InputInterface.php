@@ -15,15 +15,17 @@ declare(strict_types=1);
 namespace Horde\Cli\Modular;
 
 /**
- * Aggregate modular CLI.
+ * The interface for CLI Modular to handle user input
  *
+ * Abstracting this allows other inputs than Horde_Cli
+ * 
  * @author   Ralf Lang <ralf.lang@ralf-lang.de>
  * @category  Horde
  * @copyright 2010-2022 Horde LLC
  * @license   http://www.horde.org/licenses/lgpl21 LGPL
  * @package   Cli_Modular
  */
-class ModularCli implements ModularCliInterface
+interface InputInterface
 {
 
 }
