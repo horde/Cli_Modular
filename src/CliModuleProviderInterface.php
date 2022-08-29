@@ -14,8 +14,13 @@ declare(strict_types=1);
 
 namespace Horde\Cli\Modular;
 
+use Iterator;
+use Countable;
+
 /**
- * Aggregate modular CLI.
+ * Module providers maintain the set of modules the compose a CLI
+ * 
+ * The list is iterable and a specific module is available by an opaque key.
  *
  * @author   Ralf Lang <ralf.lang@ralf-lang.de>
  * @category  Horde
@@ -23,7 +28,7 @@ namespace Horde\Cli\Modular;
  * @license   http://www.horde.org/licenses/lgpl21 LGPL
  * @package   Cli_Modular
  */
-class ModularCli implements ModularCliInterface
+interface CliModuleProviderInterface extends Iterator, Countable
 {
 
 }

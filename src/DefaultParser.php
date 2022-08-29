@@ -15,7 +15,7 @@ declare(strict_types=1);
 namespace Horde\Cli\Modular;
 
 /**
- * Aggregate modular CLI.
+ * An adapter that wraps Horde_Argv_Parser.
  *
  * @author   Ralf Lang <ralf.lang@ralf-lang.de>
  * @category  Horde
@@ -23,7 +23,7 @@ namespace Horde\Cli\Modular;
  * @license   http://www.horde.org/licenses/lgpl21 LGPL
  * @package   Cli_Modular
  */
-class ModularCli implements ModularCliInterface
+class DefaultParser implements ParserInterface
 {
 
 }
