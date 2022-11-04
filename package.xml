@@ -16,7 +16,7 @@
   <email>p@rdus.de</email>
   <active>no</active>
  </lead>
- <date>2021-03-13</date>
+ <date>2022-11-04</date>
  <version>
   <release>3.0.0alpha4</release>
   <api>3.0.0alpha1</api>
@@ -25,12 +25,22 @@
   <release>alpha</release>
   <api>alpha</api>
  </stability>
- <license uri="http://www.horde.org/licenses/lgpl">LGPL-2.1</license>
+ <license uri="http://www.horde.org/licenses/lgpl">LGPL-2.1-only</license>
  <notes>
-* 
+* [rla] Enable PHP 8.x compat.
+* |+
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
+   <dir name=".github">
+    <dir name="workflows">
+     <file name="ci.yml" role="php" />
+     <file name="phpdoc.yml" role="php" />
+     <file name="release.yml" role="php" />
+     <file name="update-composer-json.yml" role="php" />
+     <file name="update-satis.yml" role="php" />
+    </dir> <!-- /.github/workflows -->
+   </dir> <!-- /.github -->
    <dir name="doc">
     <dir name="Horde">
      <dir name="Cli">
@@ -56,35 +66,48 @@
      </dir> <!-- /lib/Horde/Cli -->
     </dir> <!-- /lib/Horde -->
    </dir> <!-- /lib -->
+   <dir name="src">
+    <file name="CliModuleInterface.php" role="php" />
+    <file name="CliModuleProviderInterface.php" role="php" />
+    <file name="CliModuleUsageInterface.php" role="php" />
+    <file name="ConfigurableCliModuleProviderInterface.php" role="php" />
+    <file name="DefaultCliFactory.php" role="php" />
+    <file name="DefaultInput.php" role="php" />
+    <file name="DefaultOutput.php" role="php" />
+    <file name="DefaultParser.php" role="php" />
+    <file name="InputInterface.php" role="php" />
+    <file name="ModularCli.php" role="php" />
+    <file name="ModularCliException.php" role="php" />
+    <file name="ModularCliInterface.php" role="php" />
+    <file name="OutputInterface.php" role="php" />
+    <file name="ParserInterface.php" role="php" />
+   </dir> <!-- /src -->
    <dir name="test">
-    <dir name="Horde">
-     <dir name="Cli">
-      <dir name="Modular">
-       <dir name="fixtures">
-        <dir name="Module">
-         <file name="One.php" role="test" />
-         <file name="Two.php" role="test" />
-        </dir> <!-- /test/Horde/Cli/Modular/fixtures/Module -->
-       </dir> <!-- /test/Horde/Cli/Modular/fixtures -->
-       <dir name="Stub">
-        <dir name="Module">
-         <file name="One.php" role="test" />
-        </dir> <!-- /test/Horde/Cli/Modular/Stub/Module -->
-        <file name="Modules.php" role="test" />
-        <file name="Provider.php" role="test" />
-       </dir> <!-- /test/Horde/Cli/Modular/Stub -->
-       <dir name="Unit">
-        <file name="ModularTest.php" role="test" />
-        <file name="ModuleProviderTest.php" role="test" />
-        <file name="ModulesTest.php" role="test" />
-       </dir> <!-- /test/Horde/Cli/Modular/Unit -->
-       <file name="AllTests.php" role="test" />
-       <file name="Autoload.php" role="test" />
-       <file name="bootstrap.php" role="test" />
-       <file name="TestCase.php" role="test" />
-      </dir> <!-- /test/Horde/Cli/Modular -->
-     </dir> <!-- /test/Horde/Cli -->
-    </dir> <!-- /test/Horde -->
+    <dir name="LibContent">
+     <dir name="fixtures">
+      <dir name="Module">
+       <file name="One.php" role="test" />
+       <file name="Two.php" role="test" />
+      </dir> <!-- /test/LibContent/fixtures/Module -->
+     </dir> <!-- /test/LibContent/fixtures -->
+     <dir name="Stub">
+      <dir name="Module">
+       <file name="One.php" role="test" />
+      </dir> <!-- /test/LibContent/Stub/Module -->
+      <file name="Modules.php" role="test" />
+      <file name="Provider.php" role="test" />
+     </dir> <!-- /test/LibContent/Stub -->
+     <dir name="Unit">
+      <file name="ModularTest.php" role="test" />
+      <file name="ModuleProviderTest.php" role="test" />
+      <file name="ModulesTest.php" role="test" />
+     </dir> <!-- /test/LibContent/Unit -->
+     <file name="Autoload.php" role="test" />
+     <file name="TestCase.php" role="test" />
+    </dir> <!-- /test/LibContent -->
+    <file name="AllTests.php" role="test" />
+    <file name="bootstrap.php" role="test" />
+    <file name="TestCase.php" role="test" />
    </dir> <!-- /test -->
    <file name="LICENSE" role="doc" />
    <file name="README.rst" role="doc" />
@@ -93,9 +116,9 @@
  <dependencies>
   <required>
    <php>
-    <min>7.0.0</min>
-    <max>8.0.0alpha1</max>
-    <exclude>8.0.0alpha1</exclude>
+    <min>7.4.0</min>
+    <max>9.0.0alpha1</max>
+    <exclude>9.0.0alpha1</exclude>
    </php>
    <pearinstaller>
     <min>1.7.0</min>
@@ -104,6 +127,11 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="workflows/ci.yml" name=".github/workflows/ci.yml" />
+   <install as="workflows/phpdoc.yml" name=".github/workflows/phpdoc.yml" />
+   <install as="workflows/release.yml" name=".github/workflows/release.yml" />
+   <install as="workflows/update-composer-json.yml" name=".github/workflows/update-composer-json.yml" />
+   <install as="workflows/update-satis.yml" name=".github/workflows/update-satis.yml" />
    <install as="CHANGES" name="doc/Horde/Cli/Modular/CHANGES" />
    <install as="DOCS_ORIGIN.rst" name="doc/Horde/Cli/Modular/DOCS_ORIGIN.rst" />
    <install as="UPGRADING.rst" name="doc/Horde/Cli/Modular/UPGRADING.rst" />
@@ -115,35 +143,36 @@
    <install as="Horde/Cli/Modular/ModuleUsage.php" name="lib/Horde/Cli/Modular/ModuleUsage.php" />
    <install as="LICENSE" name="LICENSE" />
    <install as="README.rst" name="README.rst" />
-   <install as="Horde/Cli/Modular/AllTests.php" name="test/Horde/Cli/Modular/AllTests.php" />
-   <install as="Horde/Cli/Modular/Autoload.php" name="test/Horde/Cli/Modular/Autoload.php" />
-   <install as="Horde/Cli/Modular/bootstrap.php" name="test/Horde/Cli/Modular/bootstrap.php" />
-   <install as="Horde/Cli/Modular/fixtures/Module/One.php" name="test/Horde/Cli/Modular/fixtures/Module/One.php" />
-   <install as="Horde/Cli/Modular/fixtures/Module/Two.php" name="test/Horde/Cli/Modular/fixtures/Module/Two.php" />
-   <install as="Horde/Cli/Modular/Stub/Module/One.php" name="test/Horde/Cli/Modular/Stub/Module/One.php" />
-   <install as="Horde/Cli/Modular/Stub/Modules.php" name="test/Horde/Cli/Modular/Stub/Modules.php" />
-   <install as="Horde/Cli/Modular/Stub/Provider.php" name="test/Horde/Cli/Modular/Stub/Provider.php" />
-   <install as="Horde/Cli/Modular/TestCase.php" name="test/Horde/Cli/Modular/TestCase.php" />
-   <install as="Horde/Cli/Modular/Unit/ModularTest.php" name="test/Horde/Cli/Modular/Unit/ModularTest.php" />
-   <install as="Horde/Cli/Modular/Unit/ModuleProviderTest.php" name="test/Horde/Cli/Modular/Unit/ModuleProviderTest.php" />
-   <install as="Horde/Cli/Modular/Unit/ModulesTest.php" name="test/Horde/Cli/Modular/Unit/ModulesTest.php" />
+   <install as="CliModuleInterface.php" name="src/CliModuleInterface.php" />
+   <install as="CliModuleProviderInterface.php" name="src/CliModuleProviderInterface.php" />
+   <install as="CliModuleUsageInterface.php" name="src/CliModuleUsageInterface.php" />
+   <install as="ConfigurableCliModuleProviderInterface.php" name="src/ConfigurableCliModuleProviderInterface.php" />
+   <install as="DefaultCliFactory.php" name="src/DefaultCliFactory.php" />
+   <install as="DefaultInput.php" name="src/DefaultInput.php" />
+   <install as="DefaultOutput.php" name="src/DefaultOutput.php" />
+   <install as="DefaultParser.php" name="src/DefaultParser.php" />
+   <install as="InputInterface.php" name="src/InputInterface.php" />
+   <install as="ModularCli.php" name="src/ModularCli.php" />
+   <install as="ModularCliException.php" name="src/ModularCliException.php" />
+   <install as="ModularCliInterface.php" name="src/ModularCliInterface.php" />
+   <install as="OutputInterface.php" name="src/OutputInterface.php" />
+   <install as="ParserInterface.php" name="src/ParserInterface.php" />
+   <install as="AllTests.php" name="test/AllTests.php" />
+   <install as="bootstrap.php" name="test/bootstrap.php" />
+   <install as="LibContent/Autoload.php" name="test/LibContent/Autoload.php" />
+   <install as="LibContent/fixtures/Module/One.php" name="test/LibContent/fixtures/Module/One.php" />
+   <install as="LibContent/fixtures/Module/Two.php" name="test/LibContent/fixtures/Module/Two.php" />
+   <install as="LibContent/Stub/Module/One.php" name="test/LibContent/Stub/Module/One.php" />
+   <install as="LibContent/Stub/Modules.php" name="test/LibContent/Stub/Modules.php" />
+   <install as="LibContent/Stub/Provider.php" name="test/LibContent/Stub/Provider.php" />
+   <install as="LibContent/TestCase.php" name="test/LibContent/TestCase.php" />
+   <install as="LibContent/Unit/ModularTest.php" name="test/LibContent/Unit/ModularTest.php" />
+   <install as="LibContent/Unit/ModuleProviderTest.php" name="test/LibContent/Unit/ModuleProviderTest.php" />
+   <install as="LibContent/Unit/ModulesTest.php" name="test/LibContent/Unit/ModulesTest.php" />
+   <install as="TestCase.php" name="test/TestCase.php" />
   </filelist>
  </phprelease>
  <changelog>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
   <release>
    <version>
     <release>1.0.0alpha1</release>
@@ -365,9 +394,10 @@
     <api>alpha</api>
    </stability>
    <date>2021-03-13</date>
-   <license uri="http://www.horde.org/licenses/lgpl">LGPL-2.1</license>
+   <license uri="http://www.horde.org/licenses/lgpl">LGPL-2.1-only</license>
    <notes>
-* 
+* [rla] Enable PHP 8.x compat.
+* |+
    </notes>
   </release>
  </changelog>
