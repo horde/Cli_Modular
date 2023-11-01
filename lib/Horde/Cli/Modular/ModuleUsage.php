@@ -10,7 +10,7 @@
  * @license  http://www.horde.org/licenses/lgpl21 LGPL
  * @package  Cli_Modular
  */
-
+use Horde\Cli\Modular\ModuleUsage;
 /**
  * The Horde_Cli_Modular_ModuleUsage interface extends the
  * Horde_Cli_Modular_Module interface with new functionality.
@@ -24,7 +24,7 @@
  * @package   Cli_Modular
  * @todo      H6: Wrap into Horde_Cli_Modular_Module
  */
-interface Horde_Cli_Modular_ModuleUsage
+interface Horde_Cli_Modular_ModuleUsage extends ModuleUsage
 {
     /**
      * Returns additional usage title for this module.
