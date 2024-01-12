@@ -1,12 +1,12 @@
 <?php
 namespace Horde\Cli\Modular;
-use Horde_Argv_OptionGroup;
-use Horde_Argv_Parser;
+use Horde\Argv\OptionGroup;
+use Horde\Argv\Parser;
 use Horde\Cli\Cli;
 
 class ParserProvider
 {
-    public function __construct(private string $parserClass = Horde_Argv_Parser::class)
+    public function __construct(private string $parserClass = Parser::class)
     {
 
     }
@@ -21,7 +21,7 @@ class ParserProvider
     }
 
 
-    public function createParser(Modules $modules, string $usage = ''): Horde_Argv_Parser
+    public function createParser(Modules $modules, string $usage = ''): Parser
     {
         $parserClass = $this->getParserClass();
         $parser = new $parserClass(
@@ -34,7 +34,7 @@ class ParserProvider
                 $parser->addOption($option);
             }
             if ($module->hasOptionGroup()) {
-                $group = new Horde_Argv_OptionGroup(
+                $group = new OptionGroup(
                     $parser,
                     $module->getOptionGroupTitle(),
                     $module->getOptionGroupDescription()
