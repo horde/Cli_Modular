@@ -17,13 +17,7 @@
             "role": "lead"
         }
     ],
-    "time": "2022-11-04",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://horde-satis.maintaina.com"
-        }
-    ],
+    "time": "2025-04-25",
     "require": {
         "php": "^7.4 || ^8",
         "horde/argv": "^3 || dev-FRAMEWORK_6_0"

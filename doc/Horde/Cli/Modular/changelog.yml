@@ -8,7 +8,9 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |+
+  notes: |
+    [rla] Bump for PHP 8.4 related testing on PHPUnit 12
+
     
 3.0.0alpha4:
   api: 3.0.0alpha1
