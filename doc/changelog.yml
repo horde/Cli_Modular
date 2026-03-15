@@ -10,8 +10,6 @@
     uri: http://www.horde.org/licenses/lgpl
   notes: |
     [rla] Bump for PHP 8.4 related testing on PHPUnit 12
-
-    
 3.0.0alpha4:
   api: 3.0.0alpha1
   state:
@@ -54,6 +52,18 @@
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
   notes: ~
+3.0.0-beta1:
+  api: 3.0.0-beta1
+  state:
+    release: beta
+    api: beta
+  date: 2026-03-15
+  license:
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: |-
+    style(php-cs-fixer): Apply current house rules.
+    chore(gitignore): Add missing ignores to list.
 2.1.0:
   api: 1.1.0
   state:
@@ -109,17 +119,6 @@
     uri: http://www.horde.org/licenses/lgpl
   notes: |
     [mms] Use new Horde_Test layout.
-2.0.0:
-  api: 1.0.0
-  state:
-    release: stable
-    api: stable
-  date: 2012-10-30
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    First stable release for Horde 5.
 2.0.0beta1:
   api: 1.0.0
   state:
@@ -143,28 +142,17 @@
   notes: |
     First alpha release for Horde 5.
     [gwr] Fixed wording of the documentation.
-1.0.0:
+2.0.0:
   api: 1.0.0
   state:
     release: stable
     api: stable
-  date: 2011-11-02
+  date: 2012-10-30
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
   notes: |
-    First stable release for Horde 4.
-1.0.0RC1:
-  api: 1.0.0
-  state:
-    release: beta
-    api: beta
-  date: 2011-10-17
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    First release candidate for Horde 4.
+    First stable release for Horde 5.
 1.0.0alpha1:
   api: 1.0.0
   state:
@@ -176,3 +164,25 @@
     uri: http://www.horde.org/licenses/lgpl
   notes: |
     Initial Horde 4 package.
+1.0.0RC1:
+  api: 1.0.0
+  state:
+    release: beta
+    api: beta
+  date: 2011-10-17
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: |
+    First release candidate for Horde 4.
+1.0.0:
+  api: 1.0.0
+  state:
+    release: stable
+    api: stable
+  date: 2011-11-02
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: |
+    First stable release for Horde 4.
