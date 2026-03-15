@@ -1,10 +1,11 @@
 <?php
+
 namespace Horde\Cli\Modular\Test\LibContent\Stub\Module;
+
 use Horde_Cli_Modular_Module;
 use Horde_Argv_Option;
 
-class One
-implements Horde_Cli_Modular_Module
+class One implements Horde_Cli_Modular_Module
 {
     public $args;
 
@@ -27,16 +28,16 @@ implements Horde_Cli_Modular_Module
      */
     public function getBaseOptions()
     {
-        return array(
+        return [
             new Horde_Argv_Option(
                 '-s',
                 '--something',
-                array(
+                [
                     'action' => 'store',
-                    'help'   => 'Base option'
-                )
+                    'help'   => 'Base option',
+                ]
             ),
-        );
+        ];
     }
 
     /**
@@ -76,15 +77,15 @@ implements Horde_Cli_Modular_Module
      */
     public function getOptionGroupOptions()
     {
-        return array(
+        return [
             new Horde_Argv_Option(
                 '-g',
                 '--group',
-                array(
+                [
                     'action' => 'store',
-                    'help'   => 'Group option'
-                )
+                    'help'   => 'Group option',
+                ]
             ),
-        );
+        ];
     }
 }

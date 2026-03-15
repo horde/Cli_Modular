@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2010-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2010-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -20,8 +21,7 @@
  * @license   http://www.horde.org/licenses/lgpl21 LGPL
  * @package   Cli_Modular
  */
-class Horde_Cli_Modular_Modules
-implements IteratorAggregate, Countable
+class Horde_Cli_Modular_Modules implements IteratorAggregate, Countable
 {
     /**
      * Parameters.
@@ -46,7 +46,7 @@ implements IteratorAggregate, Countable
      *  - exclude:   (array) Exclude these modules from the list.
      * </pre>
      */
-    public function __construct(array $parameters = null)
+    public function __construct(?array $parameters = null)
     {
         $this->_parameters = $parameters;
         $this->_initModules();
@@ -76,9 +76,9 @@ implements IteratorAggregate, Countable
             );
         }
         if (!isset($this->_parameters['exclude'])) {
-            $this->_parameters['exclude'] = array();
-        } else if (!is_array($this->_parameters['exclude'])) {
-            $this->_parameters['exclude'] = array($this->_parameters['exclude']);
+            $this->_parameters['exclude'] = [];
+        } elseif (!is_array($this->_parameters['exclude'])) {
+            $this->_parameters['exclude'] = [$this->_parameters['exclude']];
         }
         foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->_parameters['directory'])) as $file) {
             if ($file->isFile() && preg_match('/.php$/', $file->getFilename())) {

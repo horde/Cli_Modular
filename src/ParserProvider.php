@@ -1,15 +1,14 @@
 <?php
+
 namespace Horde\Cli\Modular;
+
 use Horde\Argv\OptionGroup;
 use Horde\Argv\Parser;
 use Horde\Cli\Cli;
 
 class ParserProvider
 {
-    public function __construct(private string $parserClass = Parser::class)
-    {
-
-    }
+    public function __construct(private string $parserClass = Parser::class) {}
     /**
      * Return the class name for the parser that should be used.
      *
@@ -25,9 +24,9 @@ class ParserProvider
     {
         $parserClass = $this->getParserClass();
         $parser = new $parserClass(
-            array(
-                'usage' => '%prog ' . $usage
-            )
+            [
+                'usage' => '%prog ' . $usage,
+            ]
         );
         foreach ($modules->listModules() as $module) {
             foreach ($module->getBaseOptions() as $option) {

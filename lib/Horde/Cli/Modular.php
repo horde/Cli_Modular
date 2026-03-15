@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2010-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2010-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -64,7 +65,7 @@ class Horde_Cli_Modular
      *               (object) An instance of Horde_Cli_Modular_ModuleProvider
      *  - cli:       (Horde_Cli) A Horde_Cli object for usage formatting.
      */
-    public function __construct(array $parameters = null)
+    public function __construct(?array $parameters = null)
     {
         $this->_parameters = $parameters;
     }
@@ -153,9 +154,9 @@ class Horde_Cli_Modular
     {
         $parser_class = $this->getParserClass();
         $parser = new $parser_class(
-            array(
-                'usage' => '%prog ' . $this->getUsage()
-            )
+            [
+                'usage' => '%prog ' . $this->getUsage(),
+            ]
         );
         foreach ($this->getModules() as $module_name) {
             $module = $this->getProvider()->getModule($module_name);

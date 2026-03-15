@@ -1,14 +1,14 @@
 <?php
+
 declare(strict_types=1);
+
 namespace Horde\Cli\Modular;
+
 use Horde\Cli\Cli;
 
 class ModularCli
 {
-    public function __construct(protected Cli $cli, protected Modules $modules, protected ParserProvider $parserProvider, protected string $globalUsage = '')
-    {
-
-    }
+    public function __construct(protected Cli $cli, protected Modules $modules, protected ParserProvider $parserProvider, protected string $globalUsage = '') {}
 
     public function getModules(): Modules
     {

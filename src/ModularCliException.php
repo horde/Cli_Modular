@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2011-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2011-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -10,7 +11,9 @@
  * @license  http://www.horde.org/licenses/lgpl21 LGPL 2.1
  * @package  Cli_Modular
  */
+
 namespace Horde\Cli\Modular;
+
 use Horde\Exception\Wrapped;
 
 /**
@@ -22,6 +25,4 @@ use Horde\Exception\Wrapped;
  * @license   http://www.horde.org/licenses/lgpl21 LGPL 2.1
  * @package   Cli_Modular
  */
-class ModularCLiException extends Wrapped
-{
-}
+class ModularCLiException extends Wrapped {}

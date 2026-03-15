@@ -1,13 +1,15 @@
 <?php
+
 declare(strict_types=1);
+
 namespace Horde\Cli\Modular;
+
 use IteratorAggregate;
 use Countable;
 use Traversable;
 use ArrayIterator;
 
-class Modules
-implements IteratorAggregate, Countable
+class Modules implements IteratorAggregate, Countable
 {
     /**
      * The available modules.

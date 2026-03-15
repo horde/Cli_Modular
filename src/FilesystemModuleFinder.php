@@ -1,17 +1,17 @@
 <?php
+
 namespace Horde\Cli\Modular;
+
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+
 /**
  * Scans a directory for modules with predictable classnames
  *
  */
 class FilesystemModuleFinder
 {
-    public function __construct(private string $directory, private array $excludedClassNames = [])
-    {
-
-    }
+    public function __construct(private string $directory, private array $excludedClassNames = []) {}
 
     /**
      * Initialize the list of module class names.

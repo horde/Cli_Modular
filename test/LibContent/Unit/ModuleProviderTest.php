@@ -1,9 +1,10 @@
 <?php
+
 /**
  * Test the module provider.
  *
  * PHP version 5
- * Copyright 2010-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2010-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -15,17 +16,19 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL
  * @link       http://www.horde.org/components/Horde_Cli_Modular
  */
+
 namespace Horde\Cli\Modular\Test\LibContent\Unit;
+
 use Horde\Cli\Modular\Test\LibContent\TestCase;
-use \stdClass;
-use \Horde_Cli_Modular_ModuleProvider;
+use stdClass;
+use Horde_Cli_Modular_ModuleProvider;
 
 /**
  * Test the module provider.
+ * @coversNothing
  */
 class ModuleProviderTest extends TestCase
 {
-
     public function testMissingPrefix()
     {
         $this->expectException('Horde_Cli_Modular_Exception');
@@ -36,7 +39,7 @@ class ModuleProviderTest extends TestCase
     {
         $this->expectException('Horde_Cli_Modular_Exception');
         $provider = new Horde_Cli_Modular_ModuleProvider(
-            array('prefix' => 'INVALID')
+            ['prefix' => 'INVALID']
         );
         $provider->getModule('One')->getUsage('One');
     }
@@ -44,27 +47,29 @@ class ModuleProviderTest extends TestCase
     public function testUsage()
     {
         $provider = new Horde_Cli_Modular_ModuleProvider(
-            array(
+            [
                 'prefix' => 'Horde\\Cli\\Modular\\Test\\LibContent\Stub\\Module\\',
-                'dependencies' => new stdClass,
-            )
+                'dependencies' => new stdClass(),
+            ]
         );
         $this->assertEquals(
-            'Use One', $provider->getModule('One')->getUsage('One')
+            'Use One',
+            $provider->getModule('One')->getUsage('One')
         );
     }
 
     public function testDependencies()
     {
-        $dependencies = new stdClass;
+        $dependencies = new stdClass();
         $provider = new Horde_Cli_Modular_ModuleProvider(
-            array(
+            [
                 'prefix' => 'Horde\\Cli\\Modular\\Test\\LibContent\\Stub\\Module\\',
                 'dependencies' => $dependencies,
-            )
+            ]
         );
         $this->assertSame(
-            $dependencies, $provider->getModule('One')->args[0]
+            $dependencies,
+            $provider->getModule('One')->args[0]
         );
     }
 }
