@@ -1,57 +1,14 @@
 ---
-3.0.0alpha5:
-  api: 3.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2022-11-04
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    [rla] Bump for PHP 8.4 related testing on PHPUnit 12
-3.0.0alpha4:
-  api: 3.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2022-11-04
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    [rla] Enable PHP 8.x compat.
-    |+
-3.0.0alpha3:
-  api: 3.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2021-03-13
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |+
-3.0.0alpha2:
-  api: 3.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2021-02-24
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |+
-3.0.0alpha1:
-  api: 3.0.0alpha1
+3.0.0:
+  api: 3.0.0
   state:
     release: stable
     api: stable
-  date: 2021-02-24
+  date: 2026-06-30
   license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: ~
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: "chore: update CI\nchore: Update workflow dependency"
 3.0.0-beta1:
   api: 3.0.0-beta1
   state:
@@ -61,9 +18,57 @@
   license:
     identifier: LGPL-2.1-only
     uri: https://spdx.org/licenses/LGPL-2.1-only.html
-  notes: |-
-    style(php-cs-fixer): Apply current house rules.
-    chore(gitignore): Add missing ignores to list.
+  notes: "style(php-cs-fixer): Apply current house rules.\nchore(gitignore): Add missing ignores to list."
+3.0.0alpha5:
+  api: 3.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2022-11-04
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: "[rla] Bump for PHP 8.4 related testing on PHPUnit 12\n"
+3.0.0alpha4:
+  api: 3.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2022-11-04
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: "[rla] Enable PHP 8.x compat.\n|+\n"
+3.0.0alpha3:
+  api: 3.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2021-03-13
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: ''
+3.0.0alpha2:
+  api: 3.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2021-02-24
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: ''
+3.0.0alpha1:
+  api: 3.0.0alpha1
+  state:
+    release: stable
+    api: stable
+  date: 2021-02-24
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: null
 2.1.0:
   api: 1.1.0
   state:
@@ -73,8 +78,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    [jan] Add Horde_Cli_Modular_ModuleUsage to support colored output.
+  notes: "[jan] Add Horde_Cli_Modular_ModuleUsage to support colored output.\n"
 2.0.4:
   api: 1.0.0
   state:
@@ -84,8 +88,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    [jan] Mark PHP 7 as supported.
+  notes: "[jan] Mark PHP 7 as supported.\n"
 2.0.3:
   api: 1.0.0
   state:
@@ -95,8 +98,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    [jan] Add Composer definition.
+  notes: "[jan] Add Composer definition.\n"
 2.0.2:
   api: 1.0.0
   state:
@@ -106,8 +108,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    [mms] Simplify Horde_Cli_Modular_Modules iterator.
+  notes: "[mms] Simplify Horde_Cli_Modular_Modules iterator.\n"
 2.0.1:
   api: 1.0.0
   state:
@@ -117,31 +118,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    [mms] Use new Horde_Test layout.
-2.0.0beta1:
-  api: 1.0.0
-  state:
-    release: beta
-    api: stable
-  date: 2012-07-19
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    First beta release for Horde 5.
-2.0.0alpha1:
-  api: 1.0.0
-  state:
-    release: alpha
-    api: stable
-  date: 2012-07-05
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    First alpha release for Horde 5.
-    [gwr] Fixed wording of the documentation.
+  notes: "[mms] Use new Horde_Test layout.\n"
 2.0.0:
   api: 1.0.0
   state:
@@ -151,30 +128,27 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    First stable release for Horde 5.
-1.0.0alpha1:
-  api: 1.0.0
-  state:
-    release: alpha
-    api: alpha
-  date: 2011-08-30
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    Initial Horde 4 package.
-1.0.0RC1:
+  notes: "First stable release for Horde 5.\n"
+2.0.0beta1:
   api: 1.0.0
   state:
     release: beta
-    api: beta
-  date: 2011-10-17
+    api: stable
+  date: 2012-07-19
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    First release candidate for Horde 4.
+  notes: "First beta release for Horde 5.\n"
+2.0.0alpha1:
+  api: 1.0.0
+  state:
+    release: alpha
+    api: stable
+  date: 2012-07-05
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: "First alpha release for Horde 5.\n[gwr] Fixed wording of the documentation.\n"
 1.0.0:
   api: 1.0.0
   state:
@@ -184,5 +158,24 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl
-  notes: |
-    First stable release for Horde 4.
+  notes: "First stable release for Horde 4.\n"
+1.0.0RC1:
+  api: 1.0.0
+  state:
+    release: beta
+    api: beta
+  date: 2011-10-17
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: "First release candidate for Horde 4.\n"
+1.0.0alpha1:
+  api: 1.0.0
+  state:
+    release: alpha
+    api: alpha
+  date: 2011-08-30
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl
+  notes: "Initial Horde 4 package.\n"
